@@ -1,0 +1,35 @@
+1. Check whether a given number is number or not.
+2. Convert a string "123.45" into a number using different methods.
+3. Find the type of NaN and check if a value is NaN.
+4. Round a number 4.7 to the nearest integer.
+5. Round 4.2 down and 4.8 up using Math methods.
+6. Convert a number to a fixed 2 decimal places.
+7. Find the absolute value of -25.
+8. Check whether a number is finite.
+9. Convert a number 10 into a string.
+10. Find the maximum of 10, 5, 8, 20.
+11. Find the minimum of 3, 7, 1, 9.
+12. Generate a random number between 0 and 1.
+13. Generate a random integer between 1 and 10.
+14. Check whether a number is positive, negative, or zero.
+15. Convert a floating number to integer without rounding.
+16. Find the square root of a number.
+17. Find the power of a number (23).
+18. Round a number to 2 decimal places.
+19. Generate a random integer between 50 and 100.
+20. Calculate the ceil and floor difference of a number.
+21. Check whether a number is even or odd using Math.
+22. Find the sum of digits of a number.
+23. Reverse a number using Number methods.
+24. Check if a number is a palindrome.
+25. Find the factorial of a number.
+26. Check if a number is prime.
+27. Find the GCD (HCF) of two numbers.
+28. Find the LCM of two numbers.
+29. Truncate the decimal part of a number.
+30. Find the random OTP of 6 digit
+31. Check if a number is a perfect square.
+32. Check if a number is an Armstrong number.
+33. Find the maximum value of a safe integer in JavaScript.
+34. Check if adding 0.1 + 0.2 equals 0.3 and explain why.
+35. Find the sum of all prime numbers up to N.

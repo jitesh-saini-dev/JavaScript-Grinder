@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-screen w-screen bg-black">
+    <main class="h-full w-full flex items-center justify-center">
+        <div class="w-[90%] max-w-[300px] border-4 border-yellow-400 p-[30px]
+            flex flex-col items-center justify-center rounded-[20px]">
+
+            <img src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg"
+                alt="" class="h-[120px] w-[120px] object-cover rounded-full">
+
+            <h2 class="text-[22px] sm:text-[28px] font-semibold" id="username">username</h2>
+            <p class="text-[16px] sm:text-[18px]" id="designation"></p>
+
+            <button class="px-5 py-2.5 bg-blue-600 rounded-full text-white my-4 cursor-pointer"
+                id="Followbtn">Follow</button>
+
+            <div class="flex items-center gap-[20px] text-white">
+                <div id="follower">Followers <br>0</div>
+                <div id="following">Following <br>0</div>
+                <div id="subscribers">Subscribers <br>0</div>
+            </div>
+        </div>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

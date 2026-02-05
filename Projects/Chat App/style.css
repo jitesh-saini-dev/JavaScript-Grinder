@@ -26,6 +26,7 @@ main {
   border: 2px solid white;
   border-radius: 10px;
   padding: 30px;
+  background-color: rgb(47, 46, 46);
 }
 .top {
   display: flex;

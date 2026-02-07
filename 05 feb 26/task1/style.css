@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 250px);
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Card */
+.box {
+  background: linear-gradient(145deg, #2dd4bf, #14b8a6);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Count */
+.box h1 {
+  font-size: 60px;
+  margin-bottom: 25px;
+  color: #ecfeff;
+}
+
+/* Button */
+.box button {
+  font-size: 20px;
+  padding: 12px 28px;
+  border-radius: 14px;
+  border: 2px solid #ecfeff;
+  background: transparent;
+  color: #ecfeff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.box button:hover {
+  background-color: #0f766e;
+}

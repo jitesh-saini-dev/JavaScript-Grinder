@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Practice</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="bg-black h-screen">
+        <h2 class="text-center text-yellow-500 font-bold text-4xl p-7">
+            Online Message Application
+        </h2>
+        <div class="flex justify-center mb-3" id="username"></div>
+        <!-- buttons div -->
+        <div class="flex justify-center mb-5 gap-3">
+            <!-- online -->
+            <button id="goOnline" class="px-8 py-2 bg-green-500 rounded-lg text-center text-white">
+                GoOnline
+            </button>
+            <!-- offline -->
+            <button id="goOffline" class="px-8 py-2 bg-red-500 rounded-lg text-center text-white">
+                GoOffline
+            </button>
+        </div>
+        <div class="flex justify-center">
+            <div class="rounded-2xl shadow-yellow-500 shadow-lg bg-gray-600 min-h-[50vh] w-[60vh] p-3">
+                <h2 class="text-white text-sm" id="contentmsg"></h2>
+            </div>
+        </div>
+        <div class="min-h-[20vh] flex justify-center items-center">
+            <input type="text" id="msgcontent" class="bg-gray-600 py-3 px-20 mr-3 rounded-3xl outline-none text-white"
+                placeholder="Ask me anything...." name="content" value="" />
+            <button id="sendbtn" class="px-8 py-2 bg-blue-500 rounded-lg text-center text-white">
+                Send
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

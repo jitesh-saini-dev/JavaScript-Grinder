@@ -39,7 +39,7 @@ main {
 }
 .top #goonline {
   padding: 10px 20px;
-  background-color: lightgreen;
+  background-color: #22c55e;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -65,10 +65,30 @@ main {
 .mid {
   height: 10rem;
   width: 100%;
-  background-color: lightskyblue;
+  background-image: url(https://imgs.search.brave.com/4KEjv1efVKZvRc_Mj1oml5MI-ABpEt069aqSv2gOqAo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9ODAwLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzOi8vZGV2LXRv/LXVwbG9hZHMuczMu/YW1hem9uYXdzLmNv/bS91cGxvYWRzL2Fy/dGljbGVzL2I5cWsz/dzQxc3FmMWwwY2N1/amZoLnBuZw);
+  background-position: center;
+  background-size: cover;
   margin-top: 20px;
   border-radius: 10px;
+  overflow-y: scroll;
+   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+.mid::-webkit-scrollbar {
+  display: none;
+}
+.mid span {
+  display: inline-flex;      /* 👈 full width band */
+  padding: 8px 12px;
+  margin: 8px;
+  border-radius: 15px;       /* 👈 bubble look */
+  color: black;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .bottom {
   margin-top: 20px;
   display: flex;

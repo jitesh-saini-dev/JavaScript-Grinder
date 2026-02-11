@@ -127,7 +127,24 @@
 
 //29.Find the first repeating character---------------
 
-
 // 31. Remove all spaces without using replace().
 // let removeSpaces = s => s.split(" ").join("");
 // console.log(removeSpaces("hello world js"));
+
+//61.Pallindrome and reverse of number.
+// let isPalindromeNum = (n) => {
+//   let original = n;
+//   let rev = 0;
+
+//   while (n > 0) {
+//     rev = rev * 10 + (n % 10);
+//     n = Math.floor(n / 10);
+//   }
+
+//   return original === rev;
+// };
+
+//62.Merge two arrays (using spread operator)
+// let mergeArrays = (a, b) => [...a, ...b];
+
+// console.log(mergeArrays([1, 2, 3], [4, 5, 6]));

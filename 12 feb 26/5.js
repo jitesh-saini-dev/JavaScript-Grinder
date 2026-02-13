@@ -19,7 +19,8 @@
 // console.log(state);
 // console.log(updatedData);
 
-//--------------------------
+//-------------------------------------------------------------------
+
 const state = {
   isLoggedIn: false,
   theme: "dark",
@@ -30,5 +31,11 @@ newState1 = {
   theme: state.theme === "dark" ? "light" : "dark",
 };
 
+newState2 = {
+  isLoggedIn: !newState1.isLoggedIn,
+  theme: newState1.theme === "dark" ? "light" : "dark",
+};
+
 console.log(state);
-console.log(updatedData);
+console.log(newState1);
+console.log(newState2);

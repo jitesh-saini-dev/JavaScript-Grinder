@@ -3,13 +3,13 @@
 
 const doctorBasic = {
   name: "Dr. Sharma",
-  specialization: "Cardiology"
+  specialization: "Cardiology",
 };
 
 const doctorExtra = {
   experience: 12,
-  rating: 4.8
+  rating: 4.8,
 };
 
-let updated={...doctorBasic,...doctorExtra};
+let updated = { ...doctorBasic, ...doctorExtra };
 console.log(updated);

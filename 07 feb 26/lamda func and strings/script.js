@@ -113,23 +113,86 @@
 // let parseIntStr = s => parseInt(s, 10);
 // console.log(parseIntStr("123"));
 
-//25.Count number of words from a string--------------------------
+//25.Count number of words from a string
+// const countWords = (s) => s.trim().split(/\s+/).length;
+// console.log(countWords("hello world bhai"));
 
 // 26. Reverse the string word wise.
 // let reverseWords = s => s.split(" ").reverse().join(" ");
 // console.log(reverseWords("hello how are you"));
 
-//27.Count vowels in a string-------------------------------------
+//27.Count vowels in a string
+// const countVowels = s =>
+//   [...s].filter(c => "aeiouAEIOU".includes(c)).length;
+// console.log(countVowels("education"));
 
 // 28. Remove duplicate characters.
 // let removeDuplicates = (s) => [...new Set(s)].join("");
 // console.log(removeDuplicates("programming"));
 
-//29.Find the first repeating character---------------
+//29.Find the first repeating character
+// const checkfirst = (str) => str.split('').find((char, index, arr) => arr.indexOf(char) !== index);
+// console.log(checkfirst("programming"));
+
+//30.Find the longest word in a sentence without using split().
+// let longestWord = (s) => {
+//   let longest = "";
+//   let current = "";
+
+//   [...s].forEach((ch) => {
+//     if (ch !== " ") {
+//       current += ch;
+//       if (current.length > longest.length) {
+//         longest = current;
+//       }
+//     } else {
+//       current = "";
+//     }
+//   });
+
+//   return longest;
+// };
+// console.log(longestWord("I love Javascript"));
 
 // 31. Remove all spaces without using replace().
 // let removeSpaces = s => s.split(" ").join("");
 // console.log(removeSpaces("hello world js"));
+
+//32. Extract all digits from a string and form a new string.
+
+// const extractDigits = s =>
+//   [...s].filter(ch => ch >= '0' && ch <= '9').join("");
+// console.log(extractDigits("a1b2c3d4e5"));
+
+// 33.Check if a string contains only alphabets (A–Z, a–z).
+
+// const isAlphaOnly = s => /^[a-zA-Z]+$/.test(s);
+// console.log(isAlphaOnly("hello"));
+
+// 59.Square Root of a Number using Binary Search
+const sqrtBinary = (n) => {
+  if (n < 0) return -1;
+
+  let left = 0,
+    right = n,
+    ans = 0;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (mid * mid === n) return mid;
+
+    if (mid * mid < n) {
+      ans = mid;
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return ans;
+};
+console.log(sqrtBinary(16));
 
 //61.Pallindrome and reverse of number.
 // let isPalindromeNum = (n) => {
@@ -148,3 +211,10 @@
 // let mergeArrays = (a, b) => [...a, ...b];
 
 // console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+
+// 63.Take 2 sorted array merge and output should be sorted
+// const mergeSortedLazy = (arr1, arr2) =>
+//   [...arr1, ...arr2].sort((a, b) => a - b);
+// const a1 = [1, 3, 5, 7];
+// const a2 = [2, 4, 6, 8];
+// console.log(mergeSortedLazy(a1, a2));

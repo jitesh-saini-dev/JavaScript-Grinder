@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Card Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Input aur button ka style */
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+        }
+
+        /* Container jisme cards aayenge */
+        #cardContainer {
+            display: flex;
+            gap: 20px;
+            /* Cards ke beech gap */
+            align-items: flex-start;
+            /* Left side me align rahenge */
+            flex-wrap: wrap;
+            /* Agar space kam hua toh neeche shift ho jayenge */
+        }
+
+        /* --- YE HAI MAIN CARD STYLE --- */
+        .square-card {
+            width: 200px;
+            /* 1. Square banaya */
+            height: 200px;
+            /* 1. Square banaya */
+
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            /* 2. Text ko beech me lane ka jadu (Flexbox) */
+            display: flex;
+            justify-content: center;
+            /* Horizontal (Daayein-Baayein) center */
+            align-items: center;
+            /* Vertical (Upar-Neeche) center */
+
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="controls">
+        <input type="text" id="nameInput" placeholder="Naam daalo...">
+        <button id="addBtn">Add Square Card</button>
+    </div>
+
+    <div id="cardContainer"></div>
+
+    <script>
+        const btn = document.getElementById('addBtn');
+        const input = document.getElementById('nameInput');
+        const container = document.getElementById('cardContainer');
+
+        btn.addEventListener('click', function () {
+            const name = input.value;
+
+            if (name === "") {
+                alert("Naam toh likh bhai!");
+                return;
+            }
+
+            // 1. Naya div banao
+            const div = document.createElement('div');
+
+            // 2. Class add karo (jo upar CSS me design kiya hai)
+            div.classList.add('square-card');
+
+            // 3. Naam set karo
+            div.innerText = name;
+
+            // 4. Container me jod do (Append child se neeche add hoga)
+            container.appendChild(div);
+
+            // 5. Input saaf karo
+            input.value = "";
+        });
+    </script>
+</body>
+
+</html>

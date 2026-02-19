@@ -1,86 +1,3 @@
-//2nd-Level destructuring------------------------------
-// const user = {
-//   id: 1,
-//   phonenumber: 867976434,
-//   profile: {
-//     city: "Jaipur",
-//   },
-// };
-
-// let updateuser = {
-//   ...user,
-//   profile: { ...user.profile },
-// };
-
-// updateuser.profile.city = "Kolkata";
-
-// console.log(user);
-// console.log(updateuser);
-
-//3rd-Level destructuring------------------------------
-
-// const user = {
-//   id: 1,
-//   phonenumber: 867976434,
-//   profile: {
-//     name: "John Doe",
-//     city: "Jaipur",
-//     address: {
-//         localaddress: "mansarovar",
-//         officeaddress: "malviya nagar"
-//   },
-// }
-// };
-
-// let updateuser = {
-//     ...user,
-//     profile: {
-//         ...user.profile,
-//         address: {
-//             ...user.profile.address ,officeaddress: "Gopalpura"//yha direct bhi kr skte h
-//         }
-//     }
-// };
-
-// // updateuser.profile.address.officeaddress = "Gopalpura";
-
-// console.log(user);
-// console.log(updateuser);
-
-// const arr = ["hii", "hello"];
-// let newarr = [...arr, "welcome"];
-// console.log(newarr);
-
-//-----------------------------
-// 👉 Remove role and add accessLevel: "super" in one statement.
-
-// const user = {
-//   id: 1,
-//   username: "prajjal",
-//   role: "admin",
-// };
-
-// let updateuser = {
-//   ...user,
-//   accessLevel: "super",
-// };
-// console.log(updateuser);
-
-// const state = {
-//   users: [
-//     { id: 1, name: "A" },
-//     { id: 2, name: "B" }
-//   ]
-// };
-
-// let updateState = {
-//     ...state,
-//     {
-//         ...state.users,
-
-//     }
-// }
-
 // 9️⃣ Add Item at Beginning of Array
 // const messages = ["Hello", "How are you?"];
 // const newMessage = "Good Morning";
@@ -192,3 +109,85 @@
 // };
 // console.log(product);
 // console.log(updatedProduct);
+
+// 1️⃣4️⃣ Clone Object and Override Multiple Keys
+// const settings = {
+//   theme: "dark",
+//   language: "en",
+//   notifications: true
+// };
+
+// 👉 Change theme to "light" and notifications to false using spread.
+
+// const settings = {
+//   theme: "dark",
+//   language: "en",
+//   notifications: true
+// };
+
+// let updatedSettings = {
+//   ...settings,
+//   theme: "light",
+//   notifications: false
+// };
+// console.log(settings);
+// console.log(updatedSettings);
+
+// 1️⃣5️⃣ Create Utility Function – Generic Update
+// Create function:
+// updateField(obj, key, value)
+
+// 👉 It should return updated object using spread and computed key.
+
+// function updateField(obj, key, value) {
+//   return {
+//     ...obj,
+//     [key]: value,
+//   };
+// }
+
+// const user = {
+//   id: 1,
+//   name: "Prajjal",
+//   role: "admin",
+// };
+// const updatedUser = updateField(user, "role", "super");
+// console.log(user);
+// console.log(updatedUser);
+
+// 1️⃣6️⃣ Add Item Only If Not Exists
+// const cart = [
+//   { id: 1, name: "Laptop" }
+// ];
+
+// const newItem = { id: 1, name: "Laptop" };
+
+// 👉 Add only if item id not already present. Use spread.
+
+// const cart = [{ id: 1, name: "Laptop" }];
+
+// const newItem = { id: 1, name: "Laptop" };
+
+// const isItemPresent = cart.every((item) => item.id !== newItem.id);
+// const updatedCart = isItemPresent ? [...cart, newItem] : cart;
+
+// console.log(cart);
+// console.log(updatedCart);
+
+// 1️⃣7️⃣ Remove Item from Array by ID (Immutable)
+// const cart = [
+//   { id: 1 },
+//   { id: 2 },
+//   { id: 3 }
+// ];
+
+// const idToRemove = 2;
+
+// 👉 Remove immutably.
+
+const cart = [{ id: 1 }, { id: 2 }, { id: 3 }];
+
+const idToRemove = 2;
+
+const updatedCart = cart.filter((item) => item.id !== idToRemove);
+console.log(updatedCart);

@@ -122,18 +122,41 @@
 
 // 👉 Remove role and add accessLevel: "super" in one statement.
 
-const user = {
-  id: 1,
-  username: "prajjal",
-  role: "admin",
+// const user = {
+//   id: 1,
+//   username: "prajjal",
+//   role: "admin",
+// };
+
+// const { role, ...updatedUser } = user;
+// let newuser = {
+//   ...updatedUser,
+//   accessLevel: "super",
+// };
+// // updatedUser.accessLevel = "super";
+
+// console.log(user);
+// console.log(newuser);
+
+
+// 1️⃣2️⃣ Deep Nested Array Update
+// const state = {
+//   users: [
+//     { id: 1, name: "A" },
+//     { id: 2, name: "B" }
+//   ]
+// };
+
+// const targetId = 2;
+
+// 👉 Update name of user with id 2 to "Prajjal" immutably.
+
+const state = {
+  users: [
+    { id: 1, name: "A" },
+    { id: 2, name: "B" }
+  ]
 };
 
-const { role, ...updatedUser } = user;
-let newuser = {
-  ...updatedUser,
-  accessLevel: "super",
-};
-// updatedUser.accessLevel = "super";
+const targetId = 2;
 
-console.log(user);
-console.log(newuser);

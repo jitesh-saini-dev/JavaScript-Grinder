@@ -491,7 +491,7 @@ const isPromoted = true;
 
 // const state = {
 //   user: {
-//     id: 1,
+//     id: 1,/
 //     profile: {
 //       name: "Prajjal",
 //       password: "123456",
@@ -499,4 +499,4 @@ const isPromoted = true;
 //   },
 // };
 
-// let updated = { ...user, ...user.profile ,};
+// let updated = { ...user, ...user.profile,};

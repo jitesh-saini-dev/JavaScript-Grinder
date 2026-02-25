@@ -476,27 +476,191 @@ const isPromoted = true;
 // let updated={...base,...dynamicFields};
 // console.log(updated)
 
-// 20 Remove Property Deep Inside Object
-// const state = {
-//   user: {
-//     id: 1,
-//     profile: {
-//       name: "Prajjal",
-//       password: "123456"
-//     }
-//   }
-// };
+// 4️⃣5️⃣ Remove Even Numbers (Immutable)
+// const arr = [1,2,3,4,5,6];
+// 👉 Remove all even numbers immutably.
 
-// 👉 Remove password immutably using spread + destructuring.
+// const arr = [1,2,3,4,5,6];
+// const updatedArr = arr.filter(num => num % 2 !== 0);
+// console.log(arr)
+// console.log(updatedArr);
 
-// const state = {
-//   user: {
-//     id: 1,/
-//     profile: {
-//       name: "Prajjal",
-//       password: "123456",
-//     },
-//   },
-// };
+// 4️⃣6️⃣ Add Number to End (Immutable)
+// const arr = [2,4,6];
+// const num = 10;
+// 👉 Add number immutably.
 
-// let updated = { ...user, ...user.profile,};
+// const arr = [2, 4, 6];
+// const num = 10;
+// const updatedArr = [...arr, num];
+// console.log(arr);
+// console.log(updatedArr);
+
+// 4️⃣7️⃣ Remove Specific Number (Immutable)
+// const arr = [1,5,7,9];
+// const removeNum = 5;
+// 👉 Remove number immutably.
+
+// const arr = [1, 5, 7, 9];
+// const removeNum = 5;
+
+// let updated = arr.filter((x)=>x!==5);
+// console.log(arr)
+// console.log(updated)
+
+// 4️⃣8️⃣ Insert Number at Beginning
+// const arr = [10,20,30];
+// const newNum = 99;
+// 👉 Insert immutably.
+
+// const arr = [10, 20, 30];
+// const newNum = 99;
+// let updated=[newNum,...arr];
+// console.log(arr)
+// console.log(updated)
+
+// 4️⃣9️⃣ Remove Numbers Greater Than 50
+// const arr = [10,55,23,60,45];
+// 👉 Filter immutably.
+
+// const arr = [10, 55, 23, 60, 45];
+// let updated = arr.filter((x) => x < 50);
+// console.log(arr);
+// console.log(updated);
+
+// 5️⃣0️⃣ Replace Number (Immutable)
+// const arr = [3,7,9];
+// 👉 Replace 7 with 70.
+
+// const arr = [3, 7, 9];
+// let updated = arr.map((x) => (x === 7 ? (x = 70) : x));
+// console.log(arr);
+// console.log(updated);
+
+// 5️⃣1️⃣ Add Multiple Numbers
+// const arr = [1,2,3];
+// const newNums = [8,9];
+// 👉 Merge immutably.
+
+// const arr = [1, 2, 3];
+// const newNums = [8, 9];
+// let updated = [...arr, ...newNums];
+// console.log(updated);
+
+// 5️⃣2️⃣ Remove Duplicate Numbers
+// const arr = [1,2,2,3,3,4];
+// 👉 Keep unique values.
+
+// const arr = [1,2,2,3,3,4];
+// let updated=[...new Set(arr)];
+// console.log(arr)
+// console.log(updated)
+
+// 5️⃣3️⃣ Keep Divisible by 3
+// const arr = [3,5,6,7,9];
+// 👉 Filter immutably.
+
+// const arr = [3,5,6,7,9];
+// let updated=arr.filter((x)=>x%3===0)
+// console.log(arr)
+// console.log(updated)
+
+// 5️⃣4️⃣ Remove First Occurrence
+// const arr = [4,1,4,2];
+// 👉 Remove first 4.
+
+// const arr = [4, 1, 4, 2];
+// let index = arr.indexOf(4);
+// let updated = [...arr.slice(0, index), ...arr.slice(index + 1)];
+// console.log(arr);
+// console.log(updated);
+
+// 5️⃣5️⃣ Remove String
+// const arr = ["apple","banana","mango"];
+// 👉 Remove "banana".
+
+// const arr = ["apple", "banana", "mango"];
+// let updated = arr.filter((x) => x !== "banana");
+// console.log(arr);
+// console.log(updated);
+
+// 5️⃣6️⃣ Add String
+// const arr = ["apple","mango"];
+// const newStr = "orange";
+// 👉 Add immutably.
+
+// const arr = ["apple","mango"];
+// const newStr = "orange";
+// let updated=[...arr,newStr]
+// console.log(updated)
+
+// 5️⃣7️⃣ Replace String
+// const arr = ["dog","lion"];
+// 👉 Replace "dog" with "cat".
+
+// const arr = ["dog","lion"];
+// let updated = arr.map((x) => (x === "dog" ? (x = "cat") : x));
+// console.log(arr);
+// console.log(updated)
+
+
+// 5️⃣8️⃣ Remove Strings Starting With 'a'
+// const arr = [ "apple","bat","ant"];
+// 👉 Filter immutably.
+// const arr = ["apple", "bat", "ant"];
+// let updated = arr.filter(x => !x.startsWith('a'));
+// console.log(arr);
+// console.log(updated);
+
+// 5️⃣9️⃣ Insert String at Index
+// const arr = ["apple","mango"];
+// const str = "grape";
+// 👉 Insert at index 1.
+
+// const arr = ["apple", "mango"];
+// const str = "grape";
+// arr.splice(1, 0, str);
+// console.log(arr);
+
+// const arr = ["hello", "world"];
+// const updated = arr.map(x => x.toUpperCase());
+// console.log(updated);
+
+// 6️⃣1️⃣ Remove Duplicate Strings
+// const arr = ["a","b","a","c"];
+// 👉 Keep unique.
+
+// const arr = ["a", "b", "a", "c"];
+// const unique = [...new Set(arr)];
+// console.log(unique);
+
+// 6️⃣2️⃣ Add Only If Not Present
+// const roles = ["student","admin"];
+// const newRole = "teacher";
+// 👉 Add if not exists.
+
+// const roles = ["student", "admin"];
+// const newRole = "teacher";
+// if (!roles.includes(newRole)) {
+//   roles.push(newRole);
+// }
+// console.log(roles);
+
+// 6️⃣3️⃣ Replace Status
+// const arr = ["pending","approved","pending"];
+// 👉 Replace "pending" with "completed".
+
+// const arr = ["pending", "approved", "pending"];
+// const updated = arr.map(x => 
+//   x === "pending" ? "completed" : x
+// );
+// console.log(arr)
+// console.log(updated);
+
+// 6️⃣4️⃣ Remove Last String
+// const arr = ["one","two","three"];
+// 👉 Remove last immutably.
+
+// const arr = ["one", "two", "three"];
+// const updated = arr.slice(0, -1);
+// console.log(updated);

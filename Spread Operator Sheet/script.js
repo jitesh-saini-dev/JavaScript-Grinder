@@ -54,13 +54,13 @@
 
 // 👉 If promoted, add salary: 90000 using spread. Otherwise return unchanged object.
 
-const employee = {
-  id: 101,
-  name: "Rahul",
-  role: "Developer",
-};
+// const employee = {
+//   id: 101,
+//   name: "Rahul",
+//   role: "Developer",
+// }; 
 
-const isPromoted = true;
+// const isPromoted = true;
 
 // let updated=isPromoted?{...employee,salary: 90000}:employee;
 // console.log(employee)
@@ -621,6 +621,11 @@ const isPromoted = true;
 // const str = "grape";
 // arr.splice(1, 0, str);
 // console.log(arr);
+
+
+// 6️⃣0️⃣ Uppercase Replace
+// const arr = ["hello","world"];
+// 👉 Convert all to uppercase.
 
 // const arr = ["hello", "world"];
 // const updated = arr.map(x => x.toUpperCase());

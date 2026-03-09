@@ -93,7 +93,7 @@
 // };
 
 // const doctorExtra = {
-//   experience: 12,
+//   experience: 12, 
 //   rating: 4.8,
 // };
 
@@ -392,7 +392,7 @@
 //   : cart;
 
 // console.log(updatedCart);
-//---------------------------------------------------
+//-------------------------------------------------------
 // const arr = [
 //   { id: 1, name: "iphone" },
 //   { id: 2, name: "laptop" },

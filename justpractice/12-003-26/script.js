@@ -145,9 +145,6 @@
 // console.log(updated1);
 // console.log(updated2);
 
-
-
-
 const users = [
   {
     id: 1,

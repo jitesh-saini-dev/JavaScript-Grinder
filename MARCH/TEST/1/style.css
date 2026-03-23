@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main {
+  height: 500px;
+  width: 500px;
+}
+.div1 {
+  height: 60px;
+  width: 100%;
+  border: 2px solid grey;
+}
+.div1 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.div2 {
+  height: 60px;
+  width: 100%;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.div2 #input1 {
+  width: 70%;
+  height: 30px;
+  padding: 3px;
+}
+.div2 #btn1 {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.div3 {
+  height: 60px;
+  width: 100%;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.div3 .input2 {
+  width: 85%;
+  height: 30px;
+  padding: 3px;
+}
+
+.div4 {
+  height: 60px;
+  width: 100%;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.div4 button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.div5 {
+  width: 100%;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
